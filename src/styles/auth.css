@@ -1,0 +1,37 @@
+.auth { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); background: var(--surface); }
+.auth-side {
+  background: linear-gradient(165deg, #f1f0ff 0%, #f7f7fd 50%, #fff4e4 100%);
+  border-right: 1px solid var(--line); padding: 32px 48px; display: flex; flex-direction: column; gap: 32px;
+}
+.auth-back { display: inline-flex; gap: 6px; align-items: center; color: var(--ink-2); font-weight: 600; text-decoration: none; font-size: 14px; align-self: flex-start; }
+.auth-back:hover { color: var(--ink); }
+.auth-art { flex: 1; display: grid; place-items: center; }
+.auth-quote h2 { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+.auth-quote p { color: var(--ink-2); margin-top: 12px; max-width: 42ch; font-size: 16px; }
+
+.auth-main { display: grid; place-items: center; padding: 40px 24px; }
+.auth-form { width: 100%; max-width: 410px; display: grid; gap: 16px; }
+.auth-form .logo { margin-bottom: 10px; }
+.auth-form .wordmark { font-size: 26px; }
+.role-pick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.role-pick button {
+  display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 13px 8px;
+  border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface); cursor: pointer;
+  font-weight: 600; color: var(--ink-2); font-size: 14px; transition: border-color .15s, background .15s;
+}
+.role-pick button:hover { border-color: #c9cce0; }
+.role-pick button.on { border-color: var(--iris); background: var(--iris-soft); color: var(--iris); }
+.pw { position: relative; display: block; }
+.pw input { padding-right: 46px; }
+.pw .icon-btn { position: absolute; right: 3px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.demo-hint { font-size: 13px; color: var(--ink-2); background: var(--surface-2); padding: 10px 12px; border-radius: 10px; }
+.auth-form .link-btn { justify-self: center; }
+
+@media (max-width: 860px) {
+  .auth { grid-template-columns: minmax(0, 1fr); }
+  .auth-side { padding: 20px 24px; gap: 16px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .auth-art, .auth-quote p { display: none; }
+  .auth-quote h2 { font-size: 22px; }
+}
+@media (max-width: 420px) { .two { grid-template-columns: 1fr; } }
